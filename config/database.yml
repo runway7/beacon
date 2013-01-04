@@ -1,0 +1,11 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: beacon_development
+  host: localhost
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: beacon_test
+  host: localhost
