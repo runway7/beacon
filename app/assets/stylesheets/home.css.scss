@@ -1,3 +1,159 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "pygments-github";
+@import "twitter/bootstrap/mixins";
+header {  
+  font-family: 'Play';  
+  h1, h2, h3 {
+    font-weight: 700;  
+     @media (max-width: 767px) {
+      font-size: 1.618rem;
+    }
+  }
+  
+  a {    
+    color: inherit;
+    &:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+  margin-bottom: 1.618rem;
+  background: rgba(0,0,0,0.1);  
+  @media (max-width: 767px) {
+    margin: 0 -20px 1.381rem;
+    padding: 0 20px;
+  }
+}
+
+body {  
+  margin: 1.618rem 0;
+  font-size: 16px;
+  font-family: 'Ubuntu';
+  line-height: 1.618;
+  background: url(http://hangar.runway7.net/stylesheets/images/concrete_wall_3.png);
+}
+
+.listing {
+  padding: 1.381rem 0 0;
+  border-bottom: thin solid rgba(0,0,0,0.1);
+  &:last-child{
+    border-bottom: none;
+  }
+  a {    
+    color: inherit;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  .title {
+    &:hover, &:active{
+      border-bottom: thin dashed #ccc;
+    }
+    a {
+      display: block;
+    }
+    border-bottom: thin dashed transparent;
+    font-weight: 300;
+    font-size: 1.381rem;
+    margin-bottom: 0.381rem;
+  }
+  .url {
+    a:hover, a:active {
+      text-decoration: underline;
+    }
+    font-family: 'Ubuntu Mono';
+    text-align: right;
+    vertical-align: middle;
+  } 
+}
+
+.content {
+  background: rgba(255,255,255,0.381);
+  padding: 1.618rem 8.618rem;
+  margin-bottom: 1.618rem;
+  border-radius: 0.618rem;
+  @media (max-width: 1200px) {
+    padding: 0 1.618rem;    
+  }
+  @media (max-width: 767px) {
+    padding: 0 0.618rem;
+    margin: 0 -0.618rem 1.618rem;
+  }  
+}
+
+.page {
+  padding: 1.618rem 0;
+   @media (max-width: 767px) {
+    padding: 0.618rem 0;
+  }
+  .title {
+    font-weight: 500;
+    font-size: 1.618rem;    
+    @media (max-width: 767px) {
+      font-size: 1.381rem;
+    }
+  }
+  p {
+    margin: 1.618rem 0;
+    code {
+      font-size: 1em;
+    }
+  }
+
+  pre {
+      overflow-x: auto;
+    padding: 1.618em;    
+    @media (max-width: 767px) {
+      padding: 0.618rem;  
+    }
+    white-space: pre;
+    word-wrap: normal ;
+  }  
+  a {
+    color: #333;    
+    border-bottom: thin dotted #666;
+    &:hover{
+      border-bottom: thin solid #666;
+      text-decoration: none;
+    }
+  }
+}
+
+.goto {  
+  font-weight: 600;  
+}
+
+code {
+  font-family: 'Ubuntu Mono';
+}
+
+.tags, .sharing {
+  opacity: 0.8;
+  @include transition(opacity 0.5s);  
+  &:hover{
+    opacity: 1;
+  }
+  margin-bottom: 1.618rem;
+  h4{
+    font-weight: 400;
+  }
+  a.label{
+      color: #fff;
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 0.235rem;
+      opacity: 0.8;
+  }
+}
+
+.sharing {
+  opacity: 0.6;
+  &:hover {
+    opacity: 1;
+  }
+  a {
+    font-size: 0.618remem;
+    color: inherit;
+  }
+}

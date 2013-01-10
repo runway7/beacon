@@ -5,7 +5,7 @@ Beacon::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root to: 'home#index'
   get '/auth/:provider/callback', to: 'home#login'
-  get '/auth/failure', to: 'home#failed_login'
+  get '/auth/failure', to: 'home#failed_login'  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -14,7 +14,8 @@ Beacon::Application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+  resources :pages
+  get '*path', to: 'home#read', as: :read
 
   # Example resource route with options:
   #   resources :products do

@@ -1,0 +1,10 @@
+<div class="container">
+  <%@pages.each do |page|%>
+  <div class="row">
+    <div class="span12">
+      <h4><%=page.title%> | <a href="<%=edit_page_url(page)%>">edit</a></h4>
+      <div>Published on <%=page.created_at.to_formatted_s(:long_ordinal)%></div>      
+    </div>    
+  </div>
+  <%end%>
+</div>
