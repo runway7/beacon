@@ -17,3 +17,5 @@
 
 .powenv
 
+bin/*
+bin/

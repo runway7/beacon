@@ -31,6 +31,7 @@ gem 'httparty'
 
 # Use unicorn as the app server
 gem 'unicorn'
+gem 'rack-cache'
 
 # Deploy with Capistrano
 # gem 'capistrano', group: :development
