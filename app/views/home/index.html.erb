@@ -7,12 +7,12 @@
             <div class="row-fluid listing">
               
                 <div class="row-fluid">
-                    <div class="title">
+                    <div class="span12 title">
                         <a href="<%=read_url(page.url)%>"><%=page.title%></a>
                     </div>
                 </div>
                 <div class="row-fluid">
-                  <div class="span4 tags">
+                  <div class="span12 tags">
                       
                         <%(page.tags || []).each do |tag|%>
                         <a class="label label-inverse">
@@ -21,7 +21,9 @@
                         <%end%>
                       
                   </div>
-                  <div class="span8 url">
+                </div>
+                <div class="row-fluid">
+                  <div class="span12 url">
                       <a href="<%=read_url(page.url)%>">/<%=page.url%> <span class="goto">-&gt;</span></a>
                   </div>                    
                 </div>

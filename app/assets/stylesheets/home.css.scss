@@ -57,8 +57,11 @@ body {
     font-size: 1.381rem;
     margin-bottom: 0.381rem;
   }
+  .tags {
+    margin-bottom: 0;
+  }  
   .url {
-    font-size: 0.8em;
+    font-size: 0.9em;
     a:hover, a:active {
       text-decoration: underline;
     }
