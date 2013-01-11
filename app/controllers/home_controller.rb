@@ -22,7 +22,8 @@ class HomeController < ApplicationController
     @page = Page.find_by(url: path)
     if @page.nil?
       aliased_page = Page.where('? = ANY(aliases)', path).limit(1).to_a[0]
-      redirect_to read_url(aliased_page.url) if aliased_page.present?
+      (redirect_to(read_url(aliased_page.url), status: 301) and return) if aliased_page.present?
+      redirect_to root_url and return
     end
   end
 end
