@@ -103,12 +103,13 @@ body {
   pre {
     overflow-x: auto;
     padding: 1.618em;
-    line-height: 2;    
+    line-height: 1.626;    
     @media (max-width: 1200px) {    
-      line-height: 1.618;
+      line-height: 1.5;
     }
     @media (max-width: 767px) {
       padding: 0.618rem;  
+      line-height: 1.5;
     }
     white-space: pre;
     word-wrap: normal ;
