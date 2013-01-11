@@ -70,25 +70,22 @@ body {
 .content {
   background: rgba(255,255,255,0.381);
   padding: 0.618rem 1.618rem;
-  line-height: 2.381;
+  line-height: 1.625;
   margin-bottom: 1.618rem;
   border-radius: 0.618rem;
   @media (max-width: 1200px) {
     padding: 0 1.618rem;    
-    line-height: 1.618;
+    line-height: 1.5;
   }
   @media (max-width: 767px) {
-    line-height: 1.618;
+    line-height: 1.5;
     padding: 0 0.618rem;
     margin: 0 -0.618rem 1.618rem;
   }  
 }
 
 .page {
-  padding: 1.618rem 0;
-   @media (max-width: 767px) {
-    padding: 0.618rem 0;
-  }
+  padding: 0.618rem 0;   
   .title {
     font-weight: 500;
     font-size: 1.618rem;    
