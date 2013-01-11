@@ -19,11 +19,17 @@ class HomeController < ApplicationController
 
   def read 
     path = params[:path]
+
     @page = Page.find_by(url: path)
-    if @page.nil?
-      aliased_page = Page.where('? = ANY(aliases)', path).limit(1).to_a[0]
-      (redirect_to(read_url(aliased_page.url), status: 301) and return) if aliased_page.present?
-      redirect_to root_url and return
-    end
+    return if @page.present?
+    
+    aliased_page = Page.where('? = ANY(aliases)', path).limit(1).to_a[0]
+    redirect_to(read_url(aliased_page.url), status: 301) and return if aliased_page.present?
+    
+    @pages = Page.where('? = ANY(tags)', path).to_a
+    render :index and return if @pages.present?
+
+    redirect_to root_url
+    
   end
 end

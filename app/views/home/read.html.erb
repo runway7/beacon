@@ -15,9 +15,9 @@
       <div class="tags">
       <h4>More Articles</h4>      
         <%@page.tags.each do |tag|%>
-          <a class="label label-inverse"><%=tag%></a>
+          <a class="label label-inverse" href="<%=read_path(tag)%>"><%=tag%></a>
         <%end%>
-        <a class="label label-inverse">All</a>
+        <a class="label label-inverse" href="<%=root_path%>">All</a>
       </div>
       <div class="sharing">
         <h4>Share</h4>        

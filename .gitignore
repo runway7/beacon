@@ -19,3 +19,5 @@
 
 bin/*
 bin/
+*.DS_Store
+.DS_Store
