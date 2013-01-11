@@ -1,5 +1,6 @@
-@import "pygments-github";
 @import "twitter/bootstrap/mixins";
+
+
 header {  
   font-family: 'Play';  
   h1, h2, h3 {
@@ -29,7 +30,7 @@ body {
   font-size: 16px;
   font-family: 'Ubuntu';
   line-height: 1.618;
-  background: url(http://hangar.runway7.net/stylesheets/images/concrete_wall_3.png);
+  background: $bg;
 }
 
 .listing {
