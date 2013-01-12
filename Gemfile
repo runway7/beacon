@@ -38,4 +38,4 @@ gem 'rack-cache'
 
 # To use debugger
 # gem 'debugger'
-# gem 'newrelic_rpm'
+gem 'newrelic_rpm'
