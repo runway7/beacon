@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def login
     if auth_hash.extra.raw_info.login == ENV['GITHUB_OWNER']
-      session['authorized'] = true 
+      session[:authorized] = true 
       render json: 'OK'
     else 
       reset_session
@@ -11,6 +11,7 @@ class HomeController < ApplicationController
 
   def logout
     reset_session
+    redirect_to root_url
   end
 
   def index

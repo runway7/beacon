@@ -1,5 +1,12 @@
 class PagesController < ApplicationController
+  before_filter :auth_check
   layout "admin"
+
+  def auth_check
+    if session[:authorized] != true
+      render(text: 'BUGGER OFF.',  status: 403) and return
+    end
+  end
 
   def index
     @pages = Page.all
