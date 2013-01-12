@@ -6,27 +6,17 @@
         <div class="page">
           <div class="title"><%=@page.title%></div>
           <div class="piece">
-            <%=@page.rendered_content%>
+            <%=@page.rendered_content%>            
+          </div>
+          <div class="footnote">            
+            <p>If you enjoyed this article, do <a href="https://twitter.com/intent/tweet?related=runway_7&url=<%=u read_url(@page.url)%>">tweet it</a> or share the <a href="<%=read_url(@page.url)%>">link</a> with others. </p>
+            <p>You could also look at other articles with the same <%=(@page.tags.size > 1 ? 'tags' : 'tag')%>: <%@page.tags.each do |tag|%><a href="<%=read_path(tag)%>"><%=tag%></a> <%end%></p>
+            <p>Brought to you by the folks behind <a href="http://www.runway7.net">Runway7</a>, a collection of useful APIs that make web development faster and more convenient.</p>
           </div>
         </div>
       </div>
     </div>
-    <div class="span2">
-      <div class="tags">
-      <h4>More Articles</h4>      
-        <%@page.tags.each do |tag|%>
-          <a class="label label-inverse" href="<%=read_path(tag)%>"><%=tag%></a>
-        <%end%>
-        <a class="label label-inverse" href="<%=root_path%>">All</a>
-      </div>
-      <div class="sharing">
-        <h4>Share</h4>        
-          <div><a href="https://twitter.com/runway_7" class="twitter-follow-button" data-show-count="false">Follow @runway_7</a></div>
-          <div><a href="https://twitter.com/share" class="twitter-share-button" data-related="runway_7">Tweet</a></div>                    
-          <div><div class="g-plusone" data-size="medium"></div></div>
-          <div><div class="fb-like" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false" data-font="lucida grande"></div></div>          
-
-      </div>
+    <div class="span2">      
     </div>
   </div>
   

@@ -34,7 +34,7 @@ body {
 }
 
 .listing {
-  padding: 0.618rem 0 0;
+  padding: 0.618rem 0;
   border-bottom: thin solid rgba(0,0,0,0.1);
   &:last-child{
     border-bottom: none;
@@ -58,18 +58,8 @@ body {
     margin-bottom: 0.381rem;
   }
   .tags {
-    margin-bottom: 0.618rem;
-  }  
-  .url {
-    font-size: 0.9em;
-    margin-bottom: 0.618rem;
-    a:hover, a:active {
-      text-decoration: underline;
-    }
-    font-family: 'Ubuntu Mono';
-    text-align: right;
-    vertical-align: middle;
-  } 
+    margin-bottom: 0.235rem;
+  }
 }
 
 .content {
@@ -127,6 +117,9 @@ body {
       text-decoration: none;
     }
   }
+  .footnote {
+    border-top: solid thin #ccc;
+  }
 }
 
 .goto {  
@@ -147,16 +140,19 @@ code {
   h4{
     font-weight: 400;
   }
-  a.label{
-      color: #fff;
-      display: inline-block;
-      text-transform: uppercase;
-      font-size: 0.7rem;
-      font-weight: 500;
-      padding: 0.235rem;
-      opacity: 0.8;
-  }
+
 }
+
+  a.label{
+    font-weight: 300 !important;
+    color: #fff;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 0.235rem;
+    opacity: 0.8;
+  }
 
 .sharing {
   opacity: 0.6;
