@@ -1,15 +1,13 @@
 source 'https://rubygems.org'
-ruby '1.9.3'
+ruby '2.0.0'
 
-gem 'rails',     github: 'rails/rails'
-gem 'arel',      github: 'rails/arel'
+gem 'rails', '4.0.0.beta1'
 
 gem 'pg'
 
 group :assets do
-  gem 'sprockets-rails', github: 'rails/sprockets-rails'
-  gem 'sass-rails',   github: 'rails/sass-rails'
-  gem 'coffee-rails', github: 'rails/coffee-rails'
+  gem 'sass-rails', '~> 4.0.0.beta1'
+  gem 'coffee-rails', '~> 4.0.0.beta1'  
   gem 'uglifier', '>= 1.0.3'
   gem 'bootstrap-sass-rails'
 end

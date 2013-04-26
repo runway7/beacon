@@ -3,9 +3,11 @@ development:
   encoding: unicode
   database: beacon_development
   host: localhost
+  username: sudhirjonathan
 
 test:
   adapter: postgresql
   encoding: unicode
   database: beacon_test
   host: localhost
+  username: sudhirjonathan
