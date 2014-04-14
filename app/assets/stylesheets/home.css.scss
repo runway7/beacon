@@ -1,174 +1,47 @@
-@import "twitter/bootstrap/mixins";
 
+hr {
+  border-color: rgba(0,0,0,0.1);
+}
+a {
+  color: inherit;
+  transition: color 0.3s;
+  &:hover {
+    text-decoration: none;
+    color: #666;
+  }
+}
+header {
+  font-family: 'Play';
+}
 
-header {  
-  font-family: 'Play';  
-  h1, h2, h3 {
-    font-weight: 700;  
-     @media (max-width: 767px) {
-      font-size: 1.618rem;
-    }
-  }
-  
-  a {    
-    color: inherit;
-    &:hover {
-      color: inherit;
-      text-decoration: none;
-    }
-  }
-  margin-bottom: 1.618rem;
-  background: rgba(0,0,0,0.1);  
-  @media (max-width: 767px) {
-    margin: 0 -20px 1.381rem;
-    padding: 0 20px;
+.piece, .footnote {
+  a {
+    color: #555;
+    border-bottom: thin solid rgba(0,0,0,0.2);
   }
 }
 
-body {  
-  margin: 1.618rem 0;
+body {
   font-size: 16px;
   font-family: 'Ubuntu';
   line-height: 1.618;
   background: $bg;
 }
 
-.listing {
-  padding: 0.618rem 0;
-  border-bottom: thin solid rgba(0,0,0,0.1);
-  &:last-child{
-    border-bottom: none;
-  }
-  a {    
-    color: inherit;
-    &:hover{
-      text-decoration: none;
-    }
-  }
-  .title {
-    &:hover, &:active{
-      border-bottom: thin dashed #ccc;
-    }
-    a {
-      display: block;
-    }
-    border-bottom: thin dashed transparent;
-    font-weight: 300;
-    font-size: 1.381rem;
-    margin-bottom: 0.381rem;
-  }
-  .tags {
-    margin-bottom: 0.235rem;
-  }
-}
-
-.content {
-  background: rgba(255,255,255,0.381);
-  padding: 0.618rem 1.618rem;
-  line-height: 1.625;
-  margin-bottom: 1.618rem;
-  border-radius: 0.618rem;
-  @media (max-width: 1200px) {
-    padding: 0 1.618rem;    
-    line-height: 1.5;
-  }
-  @media (max-width: 767px) {
-    line-height: 1.5;
-    padding: 0 0.618rem;
-    margin: 0 -0.618rem 1.618rem;
-  }  
-}
-
-.page {
-  padding: 0.618rem 0;   
-  .title {
-    font-weight: 500;
-    font-size: 2rem;    
-    @media (max-width: 767px) {
-      font-size: 1.618rem;
-    }
-  }
-  p {
-    margin: 1.618rem 0;
-    code {
-      font-size: 1em;
-    }
-  }
-
-  pre {
-    overflow-x: auto;
-    padding: 1.618em;
-    line-height: 1.626;    
-    @media (max-width: 1200px) {    
-      line-height: 1.5;
-    }
-    @media (max-width: 767px) {
-      padding: 0.618rem;  
-      line-height: 1.5;
-    }
-    white-space: pre;
-    word-wrap: normal ;
-  }  
-  a {
-    color: #333;    
-    border-bottom: thin dotted #666;
-    &:hover{
-      border-bottom: thin solid #666;
-      text-decoration: none;
-    }
-  }
-  .footnote {
-    border-top: solid thin #ccc;
-  }
-}
-
-.goto {  
-  font-weight: 600;  
-}
-
 code {
   font-family: 'Ubuntu Mono';
 }
-
-.tags, .sharing {
-  opacity: 0.8;
-  @include transition(opacity 0.5s);  
-  &:hover{
-    opacity: 1;
+pre {
+  overflow-x: auto;
+  padding: 1em;
+  line-height: 1.626;
+  @media (max-width: 1200px) {
+    line-height: 1.5;
   }
-  margin-bottom: 1.618rem;
-  h4{
-    font-weight: 400;
+  @media (max-width: 767px) {
+    padding: 0.618rem;
+    line-height: 1.5;
   }
-
-}
-
-  a.label{
-    font-weight: 300 !important;
-    color: #fff;
-    display: inline-block;
-    text-transform: uppercase;
-    font-size: 0.7rem;
-    font-weight: 500;
-    padding: 0.235rem;
-    opacity: 0.8;
-  }
-
-.sharing {
-  opacity: 0.6;
-  &:hover {
-    opacity: 1;
-  }
-  a {
-    font-size: 0.618remem;
-    color: inherit;
-  }
-}
-
-#callout {  
-  display: none;
-  padding: 1.381rem;
-  background: rgba(0,0,0,0.02);
-  margin-bottom: 1.618rem;
-  border-radius: 0.618rem;
+  white-space: pre;
+  word-wrap: normal ;
 }

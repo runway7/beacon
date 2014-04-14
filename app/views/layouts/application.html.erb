@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title><%= @title || "Hangar | The Runway 7 Technical Blog"-%></title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href='//fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet' type='text/css'>
-        <link href='//fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic' rel='stylesheet' type='text/css'>
-        <link href='//fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-        <%= stylesheet_link_tag    "reader", media: "all", "data-turbolinks-track" => true %>
-        <%= javascript_include_tag "reader", "data-turbolinks-track" => true %>
-        <%= csrf_meta_tags %>
-    </head>
-    <body>
-        <header>
-            <div class="container">
-                <div class="row">
-                    <div class="span2"></div>
-                    <div class="span8">
-                        <h2>
-                            <a href="<%=root_url%>">HANGAR</a>&nbsp;.&nbsp;<a href="http://www.runway7.net">RUNWAY&nbsp;7</a>                            
-                        </h2>
-                    </div>
-                    <div class="span2"></div>
-                </div>
-            </div>
-        </header>
-        <%= yield %>       
-        <%= render "analytics"%>        
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-        <script type="text/javascript" charset="utf-8" async defer>
-          $(function(){
-            $.getJSON('http://blip.runway7.net').done(function(data){
-              if (data && data.country == "IN") {
-                $('#callout').slideDown();
-              }
-            });
-          });
-        </script>
-    </body>
+  <head>
+    <title><%= @title || "Hangar | The Runway 7 Technical Blog"-%></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href='//fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="col-sm-10">
+            <h2>
+              <a href="<%=root_url%>">HANGAR</a>&nbsp;.&nbsp;<a href="http://www.runway7.net">RUNWAY&nbsp;7</a>
+            </h2>
+          </div>
+          <div class="col-sm-1"></div>
+        </div>
+      </div>
+    </header>
+    <%= yield %>
+    <%= render "analytics"%>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" async defer>
+      $(function(){
+        $.getJSON('http://blip.runway7.net').done(function(data){
+          if (data && data.country == "IN") {
+            $('#callout').slideDown();
+          }
+        });
+      });
+    </script>
+  </body>
 </html>

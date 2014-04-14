@@ -1,22 +1,20 @@
 <div class="container">
   <div class="row">
-    <div class="span2"></div>
-    <div class="span8">
-      <div id="callout">If you're in Bangalore or Chennai, you might be interested in the web programming workshops I'm conducting. Details on <a href="http://mindthegeek.com">mindthegeek.com</a></div>
-      <div class="content">
-        <div class="page">
-          <div class="title"><%=@page.title%></div>          
-          <div class="piece">
-            <%=@page.rendered_content%>            
-          </div>
-          <div class="footnote">            
-            <p>If you enjoyed this article, do <a href="https://twitter.com/intent/tweet?related=runway_7&url=<%=u read_url(@page.url)%>">tweet it</a> or share the <a href="<%=read_url(@page.url)%>">link</a> with others. </p>
-            <p>You could also look at other articles with the same <%=(@page.tags.size > 1 ? 'tags' : 'tag')%>: <%@page.tags.each do |tag|%><a href="<%=read_path(tag)%>"><%=tag%></a> <%end%></p>
-            <p>Brought to you by the folks behind <a href="http://www.runway7.net">Runway7</a>, a collection of useful APIs that make web development faster and more convenient.</p>
-          </div>
-        </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <hr/>
+      <a href="<%=read_url(@page.url)%>"><h2><%=@page.title%></h2></a>
+      <hr/>
+      <div class="piece">
+        <%=@page.rendered_content%>
+      </div>
+      <hr/>
+      <div class="footnote">
+        <p>If you enjoyed this article, do <a href="https://twitter.com/intent/tweet?related=runway_7&url=<%=u read_url(@page.url)%>">tweet it</a> or share the <a href="<%=read_url(@page.url)%>">link</a> with others. </p>
+        <p>You could also look at other articles with the same <%=(@page.tags.size > 1 ? 'tags' : 'tag')%>: <%@page.tags.each do |tag|%><a href="<%=read_path(tag)%>"><%=tag%></a> <%end%></p>
+        <p>Brought to you by the folks behind <a href="http://www.runway7.net">Runway7</a>, a collection of useful APIs that make web development faster and more convenient.</p>
       </div>
     </div>
-    <div class="span2"></div>
-  </div>  
+    <div class="col-sm-1"></div>
+  </div>
 </div>
