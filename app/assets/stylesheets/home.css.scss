@@ -12,6 +12,7 @@ a {
 }
 header {
   font-family: 'Play';
+  font-weight: 700;
 }
 
 .piece, .footnote {
@@ -19,6 +20,11 @@ header {
     color: #555;
     border-bottom: thin solid rgba(0,0,0,0.2);
   }
+}
+
+.label {
+  text-transform: uppercase;
+  background: gray;
 }
 
 body {
