@@ -13,6 +13,9 @@ a {
 header {
   font-family: 'Play';
   font-weight: 700;
+  h2 {
+    margin-top: 30px;
+  }
 }
 
 .piece, .footnote {
@@ -25,6 +28,7 @@ header {
 .label {
   text-transform: uppercase;
   background: gray;
+  font-weight: 300;
 }
 
 body {
