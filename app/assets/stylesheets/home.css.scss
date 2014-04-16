@@ -25,21 +25,29 @@ header {
   }
 }
 
+.title {
+  h3 {
+    font-weight: 400;
+  }
+}
+
 .label {
-  text-transform: uppercase;
-  background: gray;
-  font-weight: 300;
+  text-transform: lowercase;
+  background: rgba(0,0,0,0.3);
+  font-weight: 400;
+
 }
 
 body {
   font-size: 16px;
   font-family: 'Ubuntu';
   line-height: 1.618;
-  background: $bg;
+  
 }
 
 code {
   font-family: 'Ubuntu Mono';
+  font-size: inherit;
 }
 pre {
   overflow-x: auto;
